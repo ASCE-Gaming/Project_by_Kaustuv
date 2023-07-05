@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Curriculum Vitae</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: black;
+      color: #fff;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    
+    .section {
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+    
+    .section h2 {
+      margin-bottom: 10px;
+      color: purple;
+    }
+    
+    .section p {
+      margin-bottom: 5px;
+      color: #555;
+    }
+    
+    .section ul {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .section ul li {
+      margin-bottom: 3px;
+      color: #555;
+    }
+    
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .skills li {
+      margin-right: 10px;
+      margin-bottom: 5px;
+      padding: 5px 10px;
+      background-color: #eaeaea;
+      border-radius: 15px;
+      color: #555;
+    }
+    
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    header button {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      transition: opacity 0.3s;
+    }
+    
+    header button:hover {
+      opacity: 0.7;
+    }
+    
+    .menu {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      background-color: #fff;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      z-index: 9999;
+    }
+    
+    .menu a {
+      display: block;
+      margin-bottom: 10px;
+      color: purple;
+      text-decoration: none;
+    }
+    
+    .menu a:hover {
+      text-decoration: underline;
+    }
+    
+    .open {
+      display: block !important;
+    }
+
+    .social-icons {
+    display: flex;
+  }
+  .social-icons a {
+    display: inline-block;
+    margin-right: 20px;
+    color: white;
+    font-size: 20px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <button id="homeBtn">Home</button>
+    <button id="aboutBtn">About Me</button>
+    <button id="menuBtn">Menu</button>
+    <div class="menu" id="menu">
+      <a href="Project.html">Home</a>
+      <a href="Aboutme.html">About Me</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <img src="me1.jpg" alt="My Photo" style="max-width: 100%; max-height: 150px; border: 2px solid black; float: right;" >
+    <div class="info">
+
+  <div class="container">
+    <div style="background-color: rgb(0, 0, 0);"  class="section">
+      <h1>Kaustuv shrestha</h1>
+      <p>Student of Mills berry School</p>
+    </div>
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li> Studying as a student at Mills berry School</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li> Playing football</li>
+        <li> Playing basketball</li>
+        <li> Playing a guitar</li>
+        <li> Cooking</li>
+        <li> Cleaning</li>
+        <li> Creative</li>
+        <li>Problem Solving</li>
+        <li>Teamwork</li>
+        <li> Photography</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <ul>
+        <li>Made a simple Website</li>
+        <li>Studied Html for over 3 years</li>
+      </ul>
+    </div>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/senmaniyo002/?hl=en"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/kaustuv.stha.9"><i class="fab fa-facebook"></i></a>
+  </div>
+  
+
+  <script>
+    const homeBtn = document.getElementById('homeBtn');
+    const aboutBtn = document.getElementById('aboutBtn');
+    const menuBtn = document.getElementById('menuBtn');
+    const menu = document.getElementById('menu');
+
+    homeBtn.addEventListener('click', () => {
+      // Redirect to home page
+      window.location.href = 'Project.html';
+    });
+
+    aboutBtn.addEventListener('click', () => {
+      // Redirect to about me page
+      window.location.href = 'Aboutme.html';
+    });
+
+    menuBtn.addEventListener('click', () => {
+      // Toggle menu functionality
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
